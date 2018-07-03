@@ -5,7 +5,7 @@ import Link from "gatsby-link";
 
 import { rhythm } from "../utils/typography";
 
-const linkStyle = css({ float: `right` });
+const linkStyle = css({ float: `right`, margin: 10 });
 
 export default ({ children }) => (
   <g.Div
@@ -23,8 +23,11 @@ export default ({ children }) => (
         Pandas Eating Lots
       </g.H3>
     </Link>
-    <Link className={linkStyle} to={`/about/`}>
+    <Link className={linkStyle} to="/about">
       About
+    </Link>
+    <Link className={linkStyle} to="/blog">
+      Blog
     </Link>
     {children()}
   </g.Div>

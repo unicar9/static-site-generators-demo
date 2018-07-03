@@ -8,7 +8,7 @@ module.exports = {
     'gatsby-plugin-catch-links',
     {
       resolve: 'gatsby-source-filesystem',
-      option: {
+      options: {
         path: `${__dirname}/src/pages`,
         name: 'pages'
       }
