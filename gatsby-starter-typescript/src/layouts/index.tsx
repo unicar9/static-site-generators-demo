@@ -22,7 +22,7 @@ class DefaultLayout extends React.PureComponent<DefaultLayoutProps, void> {
             { name: 'keywords', content: 'sample, something' },
           ]}
         />
-        <Header />
+        <Header data={this.props.data} />
         <div
           style={{
             margin: '0 auto',
@@ -37,5 +37,22 @@ class DefaultLayout extends React.PureComponent<DefaultLayoutProps, void> {
     )
   }
 }
+
+export const pageQuery = graphql`
+  query LayoutQuery {
+    site {
+      siteMetadata {
+        title
+        desc
+      }
+    }
+    background: imageSharp(id: {regex: "/bg.jpg/"}) {
+      sizes(maxWidth: 1240) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  }
+`
+
 
 export default DefaultLayout
