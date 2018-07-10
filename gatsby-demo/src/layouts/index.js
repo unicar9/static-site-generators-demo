@@ -1,9 +1,10 @@
-import React from "react";
-import g from "glamorous";
-import { css } from "glamor";
-import Link from "gatsby-link";
+import React from "react"
+import g from "glamorous"
+import { css } from "glamor"
+import Link from "gatsby-link"
+import Header from '../components/header'
 
-import { rhythm } from "../utils/typography";
+import { rhythm } from "../utils/typography"
 
 const linkStyle = css({ float: `right`, margin: 10 });
 
@@ -14,6 +15,7 @@ export default ({ children }) => (
     padding={rhythm(2)}
     paddingTop={rhythm(1.5)}
   >
+    <Header />
     <Link to={`/`}>
       <g.H3
         marginBottom={rhythm(2)}
